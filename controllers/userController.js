@@ -19,8 +19,7 @@ export const loginUser = async (req, res) => {
       res.status(201).json({
         _id: user._id,
         email: user.email,
-        name: user.name,
-        todos: user.todos,
+        name: user.username,
         token: generateToken(user._id),
       });
     } else {
